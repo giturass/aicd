@@ -3,7 +3,7 @@
 # 检查环境变量
 if [ -z "$WEBDAV_URL" ] || [ -z "$WEBDAV_USERNAME" ] || [ -z "$WEBDAV_PASSWORD" ]; then
     echo "Starting without backup functionality - missing WEBDAV_URL, WEBDAV_USERNAME, or WEBDAV_PASSWORD"
-    exec sh /app/start.sh
+    exec ./start.sh
     exit 0
 fi
 
@@ -122,4 +122,4 @@ sync_data &
 
 # 启动主应用
 sleep 30
-exec sh /app/start.sh
+exec ./start.sh
