@@ -42,4 +42,4 @@ RUN wget -O /app/sync_data.sh https://raw.githubusercontent.com/giturass/aicd/re
 RUN wget -O /app/conf.ini https://raw.githubusercontent.com/giturass/aicd/refs/heads/main/conf.ini
 RUN wget -O /app/check_ports.sh https://raw.githubusercontent.com/giturass/aicd/refs/heads/main/check_ports.sh && chmod +x /app/check_ports.sh
 
-CMD ["/bin/sh", "-c", "./sync_data.sh & sleep 30 && sh /app/start.sh"]
+CMD ["/bin/sh", "-c", "./sync_data.sh & sleep 30 && ./start.sh"]
