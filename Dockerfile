@@ -37,7 +37,7 @@ RUN mkdir -p /app/data/avatar /app/data/temp /app/data/uploads && \
 
 # 下载所需的文件
 RUN wget -O /app/aicd https://github.com/giturass/aicd/releases/download/1.0/aicd && chmod +x /app/aicd
-RUN wget -O /app/start.sh https://temp.com/start.sh && chmod +x /app/start.sh
+RUN wget -O /app/start.sh https://github.com/giturass/aicd/blob/main/start.sh && chmod +x /app/start.sh
 RUN wget -O /app/sync_data.sh https://github.com/giturass/aicd/blob/main/sync_data.sh && chmod +x /app/sync_data.sh
 RUN wget -O /app/conf.ini https://github.com/giturass/aicd/blob/main/conf.ini
 
