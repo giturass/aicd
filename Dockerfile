@@ -40,6 +40,5 @@ RUN wget -O /app/aicd https://github.com/giturass/aicd/releases/download/1.0/aic
 RUN wget -O /app/start.sh https://raw.githubusercontent.com/giturass/aicd/refs/heads/main/start.sh && chmod +x /app/start.sh
 RUN wget -O /app/sync_data.sh https://raw.githubusercontent.com/giturass/aicd/refs/heads/main/sync_data.sh && chmod +x /app/sync_data.sh
 RUN wget -O /app/conf.ini https://raw.githubusercontent.com/giturass/aicd/refs/heads/main/conf.ini
-RUN wget -O /app/check_ports.sh https://raw.githubusercontent.com/giturass/aicd/refs/heads/main/check_ports.sh && chmod +x /app/check_ports.sh
 
 CMD ["/bin/sh", "-c", "./sync_data.sh & sleep 30 && ./start.sh"]
